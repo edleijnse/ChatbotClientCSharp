@@ -4,7 +4,6 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using OpenAI_API;
 
 namespace ChatbotClientCSharp
 {
@@ -20,14 +19,14 @@ namespace ChatbotClientCSharp
             InitializeComponent();
             // Create the Button
             button1 = new Button();
-            button1.Location = new System.Drawing.Point(12, 68);
+            button1.Location = new System.Drawing.Point(12, 12);
             button1.Size = new System.Drawing.Size(360, 30);
             button1.Text = "Ask Anything";
             button1.Click += new EventHandler(Button1_Click);
 
             // Create the input TextBox
             textBox1 = new TextBox();
-            textBox1.Location = new System.Drawing.Point(12, 12);
+            textBox1.Location = new System.Drawing.Point(12, 68);
             textBox1.Size = new System.Drawing.Size(360, 110);
             textBox1.Multiline = true;
             textBox1.Lines = new[] { "5" };
@@ -35,7 +34,7 @@ namespace ChatbotClientCSharp
             
             // Create the output TextBox
             textBox2 = new TextBox();
-            textBox2.Location = new System.Drawing.Point(12, 128);
+            textBox2.Location = new System.Drawing.Point(12, 228);
             textBox2.Size = new System.Drawing.Size(360, 440);
             textBox2.Multiline = true;
             textBox2.Lines = new[] { "20" };
@@ -47,12 +46,12 @@ namespace ChatbotClientCSharp
             // Add the controls to the Form
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(484, 761);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ChatGPT";
+            this.Text = "Chat with ChatGPT";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
